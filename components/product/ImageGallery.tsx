@@ -24,7 +24,7 @@ export default function ImageGallery({ images, productName }: Props) {
 
   return (
     <div className="flex flex-col md:flex-row gap-4">
-      {/* Thumbnails */}
+      {/* Miniaturas */}
       {images.length > 1 && (
         <div className="flex md:flex-col gap-2 order-2 md:order-1">
           {images.map((src, i) => (
@@ -32,12 +32,12 @@ export default function ImageGallery({ images, productName }: Props) {
               key={i}
               onClick={() => setActiveIndex(i)}
               className={`relative w-14 md:w-16 aspect-[3/4] shrink-0 overflow-hidden transition-opacity ${
-                activeIndex === i ? "opacity-100" : "opacity-40 hover:opacity-70"
+                activeIndex === i ? "opacity-100" : "opacity-35 hover:opacity-65"
               }`}
             >
               <Image
                 src={src}
-                alt={`${productName} view ${i + 1}`}
+                alt={`${productName} vista ${i + 1}`}
                 fill
                 className="object-cover"
                 sizes="64px"
@@ -47,9 +47,9 @@ export default function ImageGallery({ images, productName }: Props) {
         </div>
       )}
 
-      {/* Main image */}
+      {/* Imagen principal */}
       <div
-        className={`relative flex-1 aspect-[3/4] overflow-hidden bg-[#EFEFEF] order-1 md:order-2 cursor-zoom-in ${zoomed ? "cursor-zoom-out" : ""}`}
+        className={`relative flex-1 aspect-[3/4] overflow-hidden bg-[#EFEFEF] order-1 md:order-2 ${zoomed ? "cursor-zoom-out" : "cursor-zoom-in"}`}
         onClick={() => setZoomed(!zoomed)}
         onMouseMove={handleMouseMove}
         onMouseLeave={() => setZoomed(false)}
@@ -76,14 +76,16 @@ export default function ImageGallery({ images, productName }: Props) {
                       transform: "scale(2.2)",
                       transition: "transform 0.1s ease-out",
                     }
-                  : { transform: "scale(1)", transition: "transform 0.3s ease-out" }
+                  : {
+                      transform: "scale(1)",
+                      transition: "transform 0.3s ease-out",
+                    }
               }
               sizes="(max-width: 768px) 100vw, 55vw"
             />
           </motion.div>
         </AnimatePresence>
 
-        {/* Zoom hint */}
         {!zoomed && (
           <div className="absolute bottom-3 right-3 text-[9px] tracking-[0.1em] text-[#888888] bg-[#F5F5F5]/80 px-2 py-1">
             + ZOOM

@@ -7,8 +7,8 @@ export default function AboutPage() {
       {/* Hero image */}
       <div className="relative h-[60vh] overflow-hidden bg-[#EFEFEF]">
         <Image
-          src="https://images.unsplash.com/photo-1558171813-9f54c4cb8f73?w=2000&q=85"
-          alt="280 Blanks studio"
+          src="https://images.unsplash.com/photo-1561037404-61cd46aa615b?w=2000&q=85"
+          alt="280 Blanks dog model"
           fill
           priority
           className="object-cover object-center"
@@ -25,24 +25,28 @@ export default function AboutPage() {
           BUILT ON WEIGHT.
           <br />
           NOT ON HYPE.
+          <br />
+          FOR DOGS.
         </h1>
 
         <div className="flex flex-col gap-6 text-xs leading-relaxed tracking-[0.02em] text-[#555555]">
           <p>
             280 Blanks was founded with a single conviction: the most important
-            clothing you own should be the simplest. Not the loudest, not the
-            most embellished — the one you reach for first, every single day.
+            garment your dog wears should be the simplest. Not the most
+            embellished, not the most printed — the one you reach for before
+            every walk, every single day.
           </p>
           <p>
             Every garment starts with the fabric. We source 280-gram combed
             organic cotton from certified Portuguese mills — the kind of weight
             that drapes differently, holds its shape wash after wash, and
-            develops character over time rather than deteriorating.
+            develops character over time rather than pilling at the belly.
           </p>
           <p>
             We produce in small runs in Portugal, working with the same
             families that have been cutting and stitching since the 1970s.
-            Slow by design. No seasonal excess. No markdowns.
+            Slow by design. No seasonal excess. No markdowns. Your dog
+            deserves the same standards you apply to yourself.
           </p>
         </div>
 

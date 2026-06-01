@@ -6,9 +6,9 @@ import { useCart } from "@/lib/cart-context";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
-  { label: "SHOP", href: "/#shop" },
-  { label: "STUDIO", href: "/studio" },
-  { label: "ABOUT", href: "/about" },
+  { label: "TIENDA", href: "/#tienda" },
+  { label: "ESTUDIO", href: "/estudio" },
+  { label: "NOSOTROS", href: "/about" },
 ];
 
 export default function Header() {
@@ -19,11 +19,11 @@ export default function Header() {
     <>
       <header className="fixed top-0 left-0 right-0 z-40 bg-[#F5F5F5]/95 backdrop-blur-sm border-b border-[#E8E8E8]">
         <div className="flex items-center justify-between px-6 md:px-10 h-14">
-          {/* Left: Menu toggle */}
+          {/* Izquierda: hamburger */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="flex flex-col gap-[5px] w-6 group"
-            aria-label="Toggle menu"
+            className="flex flex-col gap-[5px] w-6"
+            aria-label="Abrir menú"
           >
             <motion.span
               animate={menuOpen ? { rotate: 45, y: 7 } : { rotate: 0, y: 0 }}
@@ -42,7 +42,7 @@ export default function Header() {
             />
           </button>
 
-          {/* Center: Logo */}
+          {/* Centro: Logo */}
           <Link
             href="/"
             className="absolute left-1/2 -translate-x-1/2 text-sm font-semibold tracking-[0.18em] text-[#111111] hover:text-[#3A3A3A] transition-colors"
@@ -50,11 +50,11 @@ export default function Header() {
             280 BLANKS
           </Link>
 
-          {/* Right: Cart */}
+          {/* Derecha: Carrito */}
           <button
             onClick={openCart}
             className="flex items-center gap-2 text-xs tracking-[0.08em] text-[#111111] hover:text-[#3A3A3A] transition-colors"
-            aria-label="Open cart"
+            aria-label="Abrir carrito"
           >
             <CartIcon />
             {count > 0 && (
@@ -70,7 +70,7 @@ export default function Header() {
         </div>
       </header>
 
-      {/* Fullscreen Nav Menu */}
+      {/* Menú fullscreen */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
@@ -91,15 +91,15 @@ export default function Header() {
                   <Link
                     href={link.href}
                     onClick={() => setMenuOpen(false)}
-                    className="text-4xl md:text-6xl font-semibold tracking-[0.1em] text-[#111111] hover:text-[#888888] transition-colors"
+                    className="text-4xl md:text-6xl font-bold tracking-tight text-[#111111] hover:text-[#888888] transition-colors"
                   >
                     {link.label}
                   </Link>
                 </motion.div>
               ))}
             </nav>
-            <div className="absolute bottom-10 left-10 text-xs tracking-[0.1em] text-[#888888]">
-              280 GSM — MADE IN PORTUGAL
+            <div className="absolute bottom-10 left-10 text-[10px] tracking-[0.14em] text-[#AAAAAA]">
+              280 GSM — HECHO EN PORTUGAL
             </div>
           </motion.div>
         )}

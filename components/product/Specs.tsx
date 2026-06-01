@@ -18,7 +18,7 @@ export default function Specs({ specs }: Props) {
         className="flex items-center justify-between w-full py-4 text-left"
       >
         <span className="text-[10px] tracking-[0.14em] text-[#888888]">
-          PRODUCT SPECIFICATIONS
+          ESPECIFICACIONES TÉCNICAS
         </span>
         <motion.span
           animate={{ rotate: open ? 45 : 0 }}

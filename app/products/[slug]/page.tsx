@@ -45,9 +45,9 @@ export default function ProductPage({ params }: Props) {
       {/* Breadcrumb */}
       <div className="px-6 md:px-10 py-4 border-b border-[#E8E8E8]">
         <nav className="flex items-center gap-2 text-[10px] tracking-[0.1em] text-[#888888]">
-          <Link href="/" className="hover:text-[#111111] transition-colors">HOME</Link>
+          <Link href="/" className="hover:text-[#111111] transition-colors">INICIO</Link>
           <span>/</span>
-          <Link href="/#shop" className="hover:text-[#111111] transition-colors">SHOP</Link>
+          <Link href="/#tienda" className="hover:text-[#111111] transition-colors">TIENDA</Link>
           <span>/</span>
           <span className="text-[#111111]">{product.number}. {product.colorway}</span>
         </nav>
@@ -55,12 +55,11 @@ export default function ProductPage({ params }: Props) {
 
       <div className="px-6 md:px-10 py-10 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-[1fr_420px] gap-10 md:gap-16 max-w-[1200px] mx-auto">
-          {/* Left: Gallery */}
+          {/* Galería */}
           <ImageGallery images={product.images} productName={product.name} />
 
-          {/* Right: Product info */}
+          {/* Info producto */}
           <div className="md:sticky md:top-24 h-fit flex flex-col gap-6">
-            {/* Title block */}
             <div>
               <p className="text-[10px] tracking-[0.16em] text-[#888888] mb-2">
                 {product.number}.
@@ -73,19 +72,16 @@ export default function ProductPage({ params }: Props) {
               </p>
             </div>
 
-            {/* Price */}
-            <p className="text-sm tracking-[0.06em] font-medium">
+            <p className="text-sm tracking-[0.06em] font-semibold">
               €{product.price.toFixed(2)} EUR
             </p>
 
-            {/* Description */}
             <p className="text-xs leading-relaxed text-[#888888] tracking-[0.02em] max-w-xs">
               {product.description}
             </p>
 
             <div className="h-px bg-[#E8E8E8]" />
 
-            {/* Size selector */}
             <div>
               <SizeSelector
                 sizes={product.sizes}
@@ -96,25 +92,23 @@ export default function ProductPage({ params }: Props) {
               />
               {error && (
                 <p className="text-[10px] tracking-[0.08em] text-red-500 mt-2">
-                  Please select a size before adding to cart.
+                  Selecciona una talla antes de añadir al carrito.
                 </p>
               )}
             </div>
 
-            {/* Add to cart */}
             <button
               onClick={handleAddToCart}
-              className="w-full h-12 bg-[#111111] text-[#F5F5F5] text-xs tracking-[0.18em] font-medium hover:bg-[#3A3A3A] transition-colors"
+              className="w-full h-12 bg-[#111111] text-[#F5F5F5] text-xs tracking-[0.2em] font-semibold hover:bg-[#3A3A3A] transition-colors"
             >
-              ADD TO CART
+              AÑADIR AL CARRITO
             </button>
 
-            {/* Trust signals */}
             <div className="flex flex-col gap-2">
               {[
-                "Free shipping on orders over €150",
-                "Free returns within 30 days",
-                "Made in Portugal",
+                "Envío gratis en pedidos superiores a €150",
+                "Devoluciones gratuitas en 30 días",
+                "Fabricado en Portugal",
               ].map((line) => (
                 <div key={line} className="flex items-center gap-2">
                   <div className="w-1 h-1 bg-[#888888] rounded-full shrink-0" />
@@ -125,15 +119,14 @@ export default function ProductPage({ params }: Props) {
 
             <div className="h-px bg-[#E8E8E8]" />
 
-            {/* Specs accordion */}
             <Specs specs={product.specs} />
           </div>
         </div>
       </div>
 
-      {/* Related products (same collection) */}
+      {/* Otros colores */}
       <div className="px-6 md:px-10 py-16 border-t border-[#E8E8E8]">
-        <p className="text-[10px] tracking-[0.18em] text-[#888888] mb-8">OTHER COLORWAYS</p>
+        <p className="text-[10px] tracking-[0.18em] text-[#888888] mb-8">OTROS COLORES</p>
         <div className="flex gap-4 overflow-x-auto pb-2">
           {products
             .filter((p) => p.slug !== product.slug)
