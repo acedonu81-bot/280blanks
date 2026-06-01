@@ -19,34 +19,28 @@ export default function AboutPage() {
 
       {/* Content */}
       <div className="px-6 md:px-10 py-20 max-w-2xl">
-        <p className="text-[10px] tracking-[0.2em] text-[#888888] mb-8">ABOUT</p>
+        <p className="text-[10px] tracking-[0.2em] text-[#888888] mb-8">NOSOTROS</p>
 
-        <h1 className="text-2xl md:text-3xl tracking-[0.08em] font-semibold text-[#111111] mb-10 leading-snug">
-          BUILT ON WEIGHT.
-          <br />
-          NOT ON HYPE.
-          <br />
-          FOR DOGS.
+        <h1 className="text-2xl md:text-3xl tracking-[0.04em] font-bold text-[#111111] mb-10 leading-snug">
+          HECHO PARA EL QUE<br />MÁS TE QUIERE<br />EN ESTE MUNDO.
         </h1>
 
         <div className="flex flex-col gap-6 text-xs leading-relaxed tracking-[0.02em] text-[#555555]">
           <p>
-            280 Blanks was founded with a single conviction: the most important
-            garment your dog wears should be the simplest. Not the most
-            embellished, not the most printed — the one you reach for before
-            every walk, every single day.
+            280 Blanks nació de una verdad que todo dueño de perro entiende:
+            tu perrhijo no es una mascota. Es familia. Te espera, te consuela,
+            te da lo mejor de sí sin pedir nada a cambio.
           </p>
           <p>
-            Every garment starts with the fabric. We source 280-gram combed
-            organic cotton from certified Portuguese mills — the kind of weight
-            that drapes differently, holds its shape wash after wash, and
-            develops character over time rather than pilling at the belly.
+            Por eso la prenda que lleva puesta no puede ser cualquier cosa.
+            Usamos algodón orgánico peinado de 280 gramos — el doble que una
+            camiseta convencional — cortado en Portugal por las mismas familias
+            que llevan cosiendo desde los años 70.
           </p>
           <p>
-            We produce in small runs in Portugal, working with the same
-            families that have been cutting and stitching since the 1970s.
-            Slow by design. No seasonal excess. No markdowns. Your dog
-            deserves the same standards you apply to yourself.
+            Sin estampados que caducan. Sin tallas que no cuadran. Sin fast
+            fashion para perros. Solo prendas que aguantan el parque, el sofá
+            y los diez años que ojalá pasen demasiado rápido.
           </p>
         </div>
 

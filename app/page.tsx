@@ -16,14 +16,15 @@ export default function Home() {
             className="font-bold text-white leading-[1.05] tracking-tight"
             style={{ fontSize: "clamp(30px, 4.5vw, 62px)" }}
           >
-            La mayoría de la ropa para perros
+            Te espera en la puerta cada día.
             <br />
-            es decorativa. La nuestra, no.
+            Merece la mejor prenda que existe.
           </h2>
           <p className="mt-8 text-sm text-white/40 leading-relaxed max-w-xl">
-            280 gramos de algodón orgánico peinado. El doble del peso de una
-            camiseta convencional. Porque tu perro merece prendas que aguanten
-            el parque, la lluvia y el sofá — sin perder la forma.
+            Tu perrhijo no entiende de marcas, pero siente la diferencia.
+            280 gramos de algodón orgánico peinado — el doble que una camiseta
+            convencional. Porque el que más te quiere en este mundo merece
+            algo hecho con el mismo criterio con el que tú te vistes.
           </p>
 
           <div className="mt-20 grid grid-cols-3 gap-8 border-t border-white/8 pt-14">
@@ -60,10 +61,11 @@ export default function Home() {
           className="font-bold text-white leading-tight tracking-tight mx-auto"
           style={{ fontSize: "clamp(26px, 3.5vw, 52px)", maxWidth: "720px" }}
         >
-          Pequeñas tiradas. Sin excedentes. Sin rebajas.
+          El primero en recibirte.<br />El último en fallarte.
         </h3>
         <p className="mt-6 text-sm text-white/35 max-w-md mx-auto leading-relaxed">
-          Producimos exactamente lo que vendemos. Cuando se acaba, se acaba.
+          Fabricamos en tiradas pequeñas, con el mismo respeto con el que
+          tu perrhijo te trata a ti. Sin excedentes. Sin rebajas. Sin prisas.
         </p>
         <a
           href="/about"

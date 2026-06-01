@@ -36,7 +36,7 @@ export default function Hero() {
           className="text-white font-bold leading-[0.88] tracking-tight mb-8"
           style={{ fontSize: "clamp(52px, 9vw, 120px)" }}
         >
-          VISTE A TU<br />PERRO<br />CON CRITERIO.
+          TU PERRHIJO<br />SE LO<br />MERECE.
         </motion.h1>
 
         <motion.p
@@ -45,7 +45,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.9 }}
           className="text-white/40 text-[10px] tracking-[0.22em] mb-12"
         >
-          280 GSM · ALGODÓN ORGÁNICO · HECHO EN PORTUGAL
+          PORQUE EL AMOR INCONDICIONAL MERECE LA MEJOR TELA
         </motion.p>
 
         <motion.div
