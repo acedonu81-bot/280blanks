@@ -9,22 +9,21 @@ export default function Hero() {
     <section className="relative h-screen w-full overflow-hidden">
       <Image
         src="https://images.unsplash.com/photo-1477884213360-7e9d7dcc1e48?w=2400&q=90"
-        alt="280 Blanks perro"
+        alt="280 Blanks"
         fill
         priority
         className="object-cover object-center"
         sizes="100vw"
       />
-      {/* Overlay fuerte para contraste */}
       <div className="absolute inset-0 bg-black/65" />
 
-      {/* Contenido centrado */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
         <motion.p
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-white/40 text-[10px] tracking-[0.35em] mb-8"
+          className="text-[10px] tracking-[0.35em] mb-8"
+          style={{ color: "#C9A030" }}
         >
           COLECCIÓN 2025
         </motion.p>
@@ -36,7 +35,7 @@ export default function Hero() {
           className="text-white font-bold leading-[0.88] tracking-tight mb-8"
           style={{ fontSize: "clamp(52px, 9vw, 120px)" }}
         >
-          TU PERRHIJO<br />SE LO<br />MERECE.
+          PARA EL QUE<br />MÁS TE<br />QUIERE.
         </motion.h1>
 
         <motion.p
@@ -45,7 +44,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.9 }}
           className="text-white/40 text-[10px] tracking-[0.22em] mb-12"
         >
-          PORQUE EL AMOR INCONDICIONAL MERECE LA MEJOR TELA
+          280 GSM · ALGODÓN ORGÁNICO · HECHO EN PORTUGAL
         </motion.p>
 
         <motion.div
@@ -55,21 +54,21 @@ export default function Hero() {
         >
           <Link
             href="/#tienda"
-            className="inline-block bg-white text-black text-[10px] tracking-[0.22em] font-semibold px-12 py-4 hover:bg-[#F0F0F0] transition-colors"
+            className="inline-block text-[10px] tracking-[0.22em] font-semibold px-12 py-4 transition-opacity hover:opacity-80"
+            style={{ background: "#C9A030", color: "#111111" }}
           >
             VER COLECCIÓN
           </Link>
         </motion.div>
       </div>
 
-      {/* Marca bottom-left */}
       <div className="absolute bottom-8 left-6 md:left-10">
-        <p className="text-white/20 text-[9px] tracking-[0.2em]">280 BLANKS™</p>
+        <p className="text-[9px] tracking-[0.2em]" style={{ color: "#C9A030", opacity: 0.4 }}>
+          280 BLANKS™
+        </p>
       </div>
-
-      {/* Línea scroll bottom-right */}
-      <div className="absolute bottom-8 right-8 flex flex-col items-center gap-2">
-        <div className="w-px h-12 bg-white/20" />
+      <div className="absolute bottom-8 right-8">
+        <div className="w-px h-12" style={{ background: "rgba(201,160,48,0.25)" }} />
       </div>
     </section>
   );

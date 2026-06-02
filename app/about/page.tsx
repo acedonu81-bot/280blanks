@@ -27,9 +27,9 @@ export default function AboutPage() {
 
         <div className="flex flex-col gap-6 text-xs leading-relaxed tracking-[0.02em] text-[#555555]">
           <p>
-            280 Blanks nació de una verdad que todo dueño de perro entiende:
-            tu perrhijo no es una mascota. Es familia. Te espera, te consuela,
-            te da lo mejor de sí sin pedir nada a cambio.
+            280 Blanks nació de una convicción: tu perro no es una mascota,
+            es compañía real. Te espera, te consuela, te da lo mejor de sí
+            sin pedir nada a cambio.
           </p>
           <p>
             Por eso la prenda que lleva puesta no puede ser cualquier cosa.
@@ -47,8 +47,8 @@ export default function AboutPage() {
         <div className="mt-14 grid grid-cols-3 gap-6 border-t border-[#E8E8E8] pt-10">
           {[
             { value: "280", label: "GSM" },
-            { value: "PT", label: "MADE IN PORTUGAL" },
-            { value: "100%", label: "ORGANIC COTTON" },
+            { value: "PT", label: "HECHO EN PORTUGAL" },
+            { value: "100%", label: "ALGODÓN ORGÁNICO" },
           ].map((stat) => (
             <div key={stat.label}>
               <p className="text-2xl font-semibold tracking-[0.06em] text-[#111111]">
